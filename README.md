@@ -53,6 +53,19 @@ Membership in the `wireshark` group does not itself grant general administrative
 
 
 ### 1.2 Capturing Network Traffic
+
+### 1.2 Capturing Network Traffic
+
+Wireshark displays the available network interfaces when launched. The loopback interface (`lo`) can be used to capture traffic between applications communicating locally on the same machine, while `ens5` was selected for capturing traffic on the Ubuntu system's Ethernet interface.
+
+![Wireshark network interfaces](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/The%20Wireshark%20interface.PNG)
+
+A packet capture was started on `ens5`, allowing network traffic to be observed in real time. The capture was subsequently stopped and saved to a packet capture file for further examination.
+
+![Capturing and saving network traffic in Wireshark](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Capture%2C%20stop%20capturing%20and%20save%20packets%20in%20Wireshark.PNG)
+
+The captured packets can be examined using Wireshark's packet list, protocol details, and packet bytes panes, providing information about network communication at different protocol layers.
+
 ### 1.3 HTTP and HTTPS Traffic Filtering
 ### 1.4 Inspecting TLS Traffic
 ### 1.5 Filtering Traffic by IP Address
