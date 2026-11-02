@@ -92,7 +92,48 @@ TCP ports 80 and 443 are commonly associated with HTTP and HTTPS, respectively. 
 
 Unlike capture filters, display filters operate on packets that have already been captured.
 
-### 1.4 Inspecting TLS Traffic
+### 1.4 TLS Handshake and IP Address Filtering
+
+The objective was to identify the IP address associated with a website and examine network traffic between the local machine and the remote server.
+
+**Identifying TLS Connections**
+
+The following Wireshark display filter was applied to identify TLS Client Hello messages:
+
+```text
+tls.handshake == 1
+```
+
+These messages are sent by a client when initiating a TLS handshake. The resulting packets were examined to identify destination IP addresses associated with the connections.
+
+![TLS Client Hello messages for two websites](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Client%20Hello%20for%20two%20websites.PNG)
+
+**Filtering Traffic by IP Address**
+
+After identifying the relevant IP address, additional display filters were applied to examine traffic associated with the remote server.
+
+![Displaying traffic associated with the website](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20all%20traffic%20from%20that%20website.PNG)
+
+The captured traffic was then examined by communication direction.
+
+**Incoming Traffic**
+
+Packets originating from the remote server were isolated to examine traffic sent toward the local machine.
+
+![Traffic sent by the remote server](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20when%20the%20website%20is%20sending%20something.PNG)
+
+**Outgoing Traffic**
+
+Packets sent from the local machine toward the remote server were also examined.
+
+![Traffic sent to the remote server](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20all%20cases%20when%20we%20are%20sending%20something%20to%20that%20website.PNG)
+
+**Security Relevance**
+
+Identifying remote IP addresses and filtering traffic by source and destination can help a security analyst investigate connections involving known or suspicious hosts.
+
+TLS Client Hello messages provide information about connection establishment, but do not by themselves establish that a connection is malicious. Likewise, an IP address observed in a TLS connection does not necessarily identify a unique website, since multiple websites may share infrastructure.
+
 ### 1.5 Filtering Traffic by IP Address
 ### 1.6 Findings and Verification Limitations
 
