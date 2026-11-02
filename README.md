@@ -26,7 +26,8 @@ Wireshark can then be installed using the APT package manager:
 sudo apt install wireshark
 ```
 
-![Installing Wireshark on Ubuntu](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Installing%20Wireshark%20on%20Ubuntu.PNG)
+<img width="731" height="441" alt="Installing Wireshark on Ubuntu" src="https://github.com/user-attachments/assets/67b93e71-c9dc-4d0a-905c-12027cc2555a" />
+
 
 **User Permissions**
 
