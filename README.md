@@ -58,7 +58,7 @@ Wireshark displays the available network interfaces when launched. The loopback 
 
 A packet capture was started on `ens5`, allowing network traffic to be observed in real time. The capture was subsequently stopped and saved to a packet capture file for further examination.
 
-![Capturing and saving network traffic in Wireshark](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Capture%2C%20stop%20capturing%20and%20save%20packets%20in%20Wireshark.PNG)
+<img width="1068" height="812" alt="Capture, stop capturing and save packets in Wireshark(1)" src="https://github.com/user-attachments/assets/fb9feccc-9dcd-4842-a61e-d83d27998ca6" />   
 
 The captured packets can be examined using Wireshark's packet list, protocol details, and packet bytes panes, providing information about network communication at different protocol layers.
 
