@@ -5,9 +5,6 @@ Hands-on network traffic analysis with Wireshark, covering packet capture, traff
 ## Lab Environment
 
 ## Part 1 – Packet Capture and Traffic Filtering
-### 1.1 Lab Environment and Wireshark Setup
-
-## Part 1 – Packet Capture and Traffic Filtering
 
 ### 1.1 Lab Environment and Wireshark Setup
 
