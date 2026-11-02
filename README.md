@@ -136,7 +136,40 @@ Identifying remote IP addresses and filtering traffic by source and destination 
 
 TLS Client Hello messages provide information about connection establishment, but do not by themselves establish that a connection is malicious. Likewise, an IP address observed in a TLS connection does not necessarily identify a unique website, since multiple websites may share infrastructure.
 
-### 1.5 Filtering Traffic by IP Address
+### 1.5 Combining Display Filters and Excluding IP Addresses
+
+The objective was to isolate relevant network traffic by combining IP address and TCP port filters. This allows an analyst to focus on specific connections or exclude traffic that is not relevant to an investigation.
+
+**Filtering Traffic by IP Address**
+
+First, traffic associated with a selected website's IP address was displayed.
+
+![Traffic associated with a selected website](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20from%20one%20of%20the%20websites.PNG)
+
+**Combining IP Address and HTTPS Port Filters**
+
+The filtering was then narrowed to traffic associated with the same IP address and TCP port 443, commonly used for HTTPS.
+
+![Filtering traffic by IP address and TCP port 443](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20from%20one%20of%20the%20websites%20and%20only%20HTTPS.PNG)
+
+**Excluding an IP Address**
+
+Next, traffic associated with the selected IP address was excluded while retaining traffic using TCP port 443.
+
+![Excluding an IP address while displaying TCP port 443 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/The%20traffic%20that%20does%20not%20come%20from%20that%20website%20and%20is%20HTTPS.PNG)
+
+**Displaying HTTP and HTTPS Traffic While Excluding an IP Address**
+
+Finally, the filtering was expanded to include traffic using TCP ports 80 and 443, while continuing to exclude the selected IP address.
+
+![HTTP and HTTPS port filtering with an excluded IP address](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20not%20from%20that%20website%20and%20are%20both%20HTTP%20and%20HTTPS.PNG)
+
+**Security Relevance**
+
+Combining display filters makes it possible to reduce irrelevant traffic and investigate selected network connections more efficiently. Excluding known IP addresses can be useful when examining other connections within a large packet capture.
+
+Display filters change which packets are visible in Wireshark without removing them from the original capture.
+
 ### 1.6 Findings and Verification Limitations
 
 ## Part 2 – Protocol Security Analysis
