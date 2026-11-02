@@ -70,11 +70,12 @@ Wireshark display filters were used to examine captured network traffic associat
 
 The display filter `tcp.port == 443` was applied to show packets using TCP port 443, which is commonly associated with HTTPS.
 
-![Filtering TCP port 443 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20captured%20packets%20using%20tcp%20port%20443.PNG)
+<img width="949" height="710" alt="Display captured packets using tcp port 443" src="https://github.com/user-attachments/assets/5ab2d837-f6aa-47bc-a4bd-88912c90e8be" />
 
 Individual packets were selected to examine additional information about the captured network communication.
 
-![Inspecting a packet using TCP port 443](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Information%20about%20the%20captured%20package%20using%20tcp%20port%20443.PNG)
+<img width="764" height="587" alt="Information about the captured package using tcp port 443" src="https://github.com/user-attachments/assets/18652cf5-f68e-496d-afe5-d6d4c4e69f2c" />
+
 
 **HTTP Traffic – TCP Port 80**
 
