@@ -2,7 +2,10 @@
 Hands-on network traffic analysis with Wireshark, covering packet capture, traffic filtering, protocol inspection, and security analysis of HTTP, HTTPS, DNS, RADIUS, Telnet, and SSH.
 
 ## Project Overview
+To be filled in later...
+
 ## Lab Environment
+To be filled in later...
 
 ## Part 1 – Packet Capture and Traffic Filtering
 
@@ -197,7 +200,6 @@ These techniques provide a foundation for network troubleshooting and security i
 
 ## Security Analysis
 ## Learning Outcomes
-## Acknowledgments
 
 ## Acknowledgments
 
