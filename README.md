@@ -53,7 +53,8 @@ Membership in the `wireshark` group does not itself grant general administrative
 
 Wireshark displays the available network interfaces when launched. The loopback interface (`lo`) can be used to capture traffic between applications communicating locally on the same machine, while `ens5` was selected for capturing traffic on the Ubuntu system's Ethernet interface.
 
-![Wireshark network interfaces](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/The%20Wireshark%20interface.PNG)
+<img width="964" height="697" alt="The Wireshark interface" src="https://github.com/user-attachments/assets/649671b5-35d0-44ce-abfc-87702dd0b983" />   
+
 
 A packet capture was started on `ens5`, allowing network traffic to be observed in real time. The capture was subsequently stopped and saved to a packet capture file for further examination.
 
