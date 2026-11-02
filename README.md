@@ -54,8 +54,6 @@ Membership in the `wireshark` group does not itself grant general administrative
 
 ### 1.2 Capturing Network Traffic
 
-### 1.2 Capturing Network Traffic
-
 Wireshark displays the available network interfaces when launched. The loopback interface (`lo`) can be used to capture traffic between applications communicating locally on the same machine, while `ens5` was selected for capturing traffic on the Ubuntu system's Ethernet interface.
 
 ![Wireshark network interfaces](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/The%20Wireshark%20interface.PNG)
@@ -67,6 +65,35 @@ A packet capture was started on `ens5`, allowing network traffic to be observed 
 The captured packets can be examined using Wireshark's packet list, protocol details, and packet bytes panes, providing information about network communication at different protocol layers.
 
 ### 1.3 HTTP and HTTPS Traffic Filtering
+
+### 1.3 HTTP and HTTPS Traffic Filtering
+
+Wireshark display filters were used to examine captured network traffic associated with HTTP and HTTPS.
+
+**HTTPS Traffic – TCP Port 443**
+
+The display filter `tcp.port == 443` was applied to show packets using TCP port 443, which is commonly associated with HTTPS.
+
+![Filtering TCP port 443 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20captured%20packets%20using%20tcp%20port%20443.PNG)
+
+Individual packets were selected to examine additional information about the captured network communication.
+
+![Inspecting a packet using TCP port 443](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Information%20about%20the%20captured%20package%20using%20tcp%20port%20443.PNG)
+
+**HTTP Traffic – TCP Port 80**
+
+A separate capture of web traffic was examined using the display filter `tcp.port == 80`, which selects packets using TCP port 80, commonly associated with unencrypted HTTP.
+
+![Filtering TCP port 80 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20captured%20packets%20for%20HTTP%20traffic.PNG)
+
+**Security Relevance**
+
+Display filters allow an analyst to isolate traffic of interest from a larger packet capture without modifying the captured data.
+
+TCP ports 80 and 443 are commonly associated with HTTP and HTTPS, respectively. However, port numbers alone do not establish which application protocol is being used.
+
+Unlike capture filters, display filters operate on packets that have already been captured.
+
 ### 1.4 Inspecting TLS Traffic
 ### 1.5 Filtering Traffic by IP Address
 ### 1.6 Findings and Verification Limitations
