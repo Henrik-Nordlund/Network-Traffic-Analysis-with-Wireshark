@@ -172,7 +172,25 @@ Combining display filters makes it possible to reduce irrelevant traffic and inv
 
 Display filters change which packets are visible in Wireshark without removing them from the original capture.
 
-### 1.6 Findings and Verification Limitations
+### 1.6 Capstone – Combined Traffic Filtering
+
+The final exercise combined the packet capture and display filtering techniques practiced in the preceding objectives.
+
+The task was to capture network traffic, save the capture file, identify HTTP and HTTPS traffic, and exclude a selected IP address from the displayed results.
+
+The display filter `tcp.port == 80` was initially used to identify traffic associated with HTTP and select an IP address for exclusion. The filtering was then adjusted to exclude the selected IP address and examine the remaining traffic.
+
+<img width="956" height="718" alt="Capstone final" src="https://github.com/user-attachments/assets/81519f33-23bc-4aab-ac33-98a8c7ba8b4c" />
+
+The exercise demonstrated how multiple display filter conditions can be combined to narrow the scope of network traffic analysis.
+
+### Part 1 – Summary
+
+This guided project covered the fundamentals of packet capture and traffic inspection using Wireshark on Ubuntu.
+
+The exercises included configuring packet capture permissions, capturing and saving network traffic, examining HTTP- and HTTPS-associated TCP traffic, identifying IP addresses through TLS handshake inspection, and combining display filters to include or exclude selected connections.
+
+These techniques provide a foundation for network troubleshooting and security investigations, where analysts need to isolate relevant communications from larger packet captures.
 
 ## Part 2 – Protocol Security Analysis
 [Sections to be developed]
