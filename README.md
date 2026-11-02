@@ -81,7 +81,8 @@ Individual packets were selected to examine additional information about the cap
 
 A separate capture of web traffic was examined using the display filter `tcp.port == 80`, which selects packets using TCP port 80, commonly associated with unencrypted HTTP.
 
-![Filtering TCP port 80 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20captured%20packets%20for%20HTTP%20traffic.PNG)
+<img width="963" height="661" alt="Display captured packets for HTTP traffic" src="https://github.com/user-attachments/assets/71048532-ddcb-4e26-933d-ee2caa2b1e4b" />
+
 
 **Security Relevance**
 
