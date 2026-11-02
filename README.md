@@ -106,13 +106,14 @@ tls.handshake == 1
 
 These messages are sent by a client when initiating a TLS handshake. The resulting packets were examined to identify destination IP addresses associated with the connections.
 
-![TLS Client Hello messages for two websites](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Client%20Hello%20for%20two%20websites.PNG)
+<img width="939" height="720" alt="Client Hello for two websites" src="https://github.com/user-attachments/assets/db19c4d0-18d0-40a9-b05a-bcbb8bf4c764" />
+
 
 **Filtering Traffic by IP Address**
 
 After identifying the relevant IP address, additional display filters were applied to examine traffic associated with the remote server.
 
-![Displaying traffic associated with the website](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20all%20traffic%20from%20that%20website.PNG)
+<img width="970" height="724" alt="Display all traffic from that website" src="https://github.com/user-attachments/assets/d53a30fa-6289-487e-962f-c6804a5f7446" />
 
 The captured traffic was then examined by communication direction.
 
