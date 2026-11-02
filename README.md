@@ -39,7 +39,8 @@ sudo usermod -aG wireshark $USER
 
 The user then logged out and logged back in for the updated group membership to take effect.
 
-![Adding user to the Wireshark group](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Adding%20a%20new%20user%20to%20the%20wireshark%20group%20with%20sudo%20permission.PNG)
+<img width="731" height="441" alt="Adding a new user to the wireshark group with sudo permission" src="https://github.com/user-attachments/assets/14cefe56-62fb-44d5-84dd-cab420624f58" />
+
 
 **Security Relevance**
 
