@@ -144,25 +144,27 @@ The objective was to isolate relevant network traffic by combining IP address an
 
 First, traffic associated with a selected website's IP address was displayed.
 
-![Traffic associated with a selected website](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20from%20one%20of%20the%20websites.PNG)
+<img width="970" height="746" alt="Traffic from one of the websites" src="https://github.com/user-attachments/assets/7bee617b-610b-47b2-9c07-95bfe9ce181d" />
 
 **Combining IP Address and HTTPS Port Filters**
 
 The filtering was then narrowed to traffic associated with the same IP address and TCP port 443, commonly used for HTTPS.
 
-![Filtering traffic by IP address and TCP port 443](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20from%20one%20of%20the%20websites%20and%20only%20HTTPS.PNG)
+<img width="963" height="742" alt="Traffic from one of the websites and only HTTPS" src="https://github.com/user-attachments/assets/1a30ac8c-34ac-41b3-85f0-179ce9e138f0" />
+
 
 **Excluding an IP Address**
 
 Next, traffic associated with the selected IP address was excluded while retaining traffic using TCP port 443.
 
-![Excluding an IP address while displaying TCP port 443 traffic](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/The%20traffic%20that%20does%20not%20come%20from%20that%20website%20and%20is%20HTTPS.PNG)
+<img width="963" height="688" alt="The traffic that does not come from that website and is HTTPS" src="https://github.com/user-attachments/assets/d860ecb7-722f-4fa0-bce4-3d7faccabdfe" />
 
 **Displaying HTTP and HTTPS Traffic While Excluding an IP Address**
 
 Finally, the filtering was expanded to include traffic using TCP ports 80 and 443, while continuing to exclude the selected IP address.
 
-![HTTP and HTTPS port filtering with an excluded IP address](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Traffic%20not%20from%20that%20website%20and%20are%20both%20HTTP%20and%20HTTPS.PNG)
+<img width="967" height="742" alt="Traffic not from that website and are both HTTP and HTTPS" src="https://github.com/user-attachments/assets/47c1da5e-a60c-420f-b36c-727954800022" />
+
 
 **Security Relevance**
 
