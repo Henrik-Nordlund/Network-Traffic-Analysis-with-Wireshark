@@ -66,8 +66,6 @@ The captured packets can be examined using Wireshark's packet list, protocol det
 
 ### 1.3 HTTP and HTTPS Traffic Filtering
 
-### 1.3 HTTP and HTTPS Traffic Filtering
-
 Wireshark display filters were used to examine captured network traffic associated with HTTP and HTTPS.
 
 **HTTPS Traffic – TCP Port 443**
