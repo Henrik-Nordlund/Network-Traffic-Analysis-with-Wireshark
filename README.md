@@ -121,13 +121,14 @@ The captured traffic was then examined by communication direction.
 
 Packets originating from the remote server were isolated to examine traffic sent toward the local machine.
 
-![Traffic sent by the remote server](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20when%20the%20website%20is%20sending%20something.PNG)
+<img width="964" height="707" alt="Display when the website is sending something" src="https://github.com/user-attachments/assets/1af2fd84-1d2c-487a-8aa9-14a324c7b07f" />
 
 **Outgoing Traffic**
 
 Packets sent from the local machine toward the remote server were also examined.
 
-![Traffic sent to the remote server](https://github.com/Henrik-Nordlund/Capturing-packets-with-Wireshark/raw/d8cc636657fe6f785cf3aca0af83b0dde2fb85ca/Display%20all%20cases%20when%20we%20are%20sending%20something%20to%20that%20website.PNG)
+<img width="960" height="702" alt="Display all cases when we are sending something to that website" src="https://github.com/user-attachments/assets/7e6a2d42-783c-480b-b0e5-847a254cb0c5" />
+
 
 **Security Relevance**
 
