@@ -499,7 +499,29 @@ The analysis demonstrated how unencrypted protocols can expose sensitive informa
 The project provided practical experience in generating network traffic, applying capture and display filters, inspecting protocol exchanges, following TCP streams, and interpreting security-relevant information in captured packets.
 
 ## Security Analysis
+The exercises highlighted the importance of encryption and appropriate authentication mechanisms in network communications.
+
+Unencrypted HTTP and Telnet traffic demonstrated how sensitive information can be exposed to network observers. Traditional DNS traffic also revealed information about domain name queries, while RADIUS analysis illustrated limitations of legacy authentication protection.
+
+Comparisons between Telnet and SSH demonstrated how encrypted protocols protect session contents. HTTPS analysis further showed that encrypted application traffic can be inspected for authorized troubleshooting when the relevant TLS session secrets are available from the client.
+
 ## Learning Outcomes
+Captured and inspected network traffic using Wireshark.
+
+Applied capture and display filters to isolate relevant communications.
+
+Examined TLS handshakes, IP addresses, and TCP conversations.
+
+Analyzed RADIUS authentication exchanges and password protection.
+
+Identified credential exposure in unencrypted HTTP authentication.
+
+Compared unencrypted Telnet sessions with encrypted SSH communications.
+
+Decrypted locally generated HTTPS traffic using exported TLS session secrets.
+
+Interpreted captured traffic in relation to confidentiality, authentication, and network security.   
+
 
 ## Acknowledgments
 
