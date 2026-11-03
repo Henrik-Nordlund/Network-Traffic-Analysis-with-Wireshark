@@ -196,7 +196,48 @@ The exercises included configuring packet capture permissions, capturing and sav
 These techniques provide a foundation for network troubleshooting and security investigations, where analysts need to isolate relevant communications from larger packet captures.
 
 ## Part 2 – Protocol Security Analysis
-[Sections to be developed]
+
+2.1	Network Traffic Capture and DNS Inspection
+2.2	RADIUS Authentication Traffic Analysis
+2.3	HTTP Basic Authentication
+2.4	HTTP Form-Based Authentication and DNS
+2.5	Telnet Traffic Analysis
+2.6	SSH Traffic Analysis
+2.7	HTTPS Traffic Decryption Using TLS Session Keys
+
+## Part 2 – Network Security Analysis
+
+### 2.1 Network Traffic Capture and Protocol Inspection
+
+This guided lab focused on examining network traffic from different protocols using Wireshark, with particular attention to authentication mechanisms and the visibility of information transmitted over the network.
+
+**RADIUS Traffic Inspection**
+
+A previously captured PCAP file was opened in Wireshark to examine RADIUS (Remote Authentication Dial-In User Service) traffic.
+
+The exercise involved inspecting authentication traffic associated with unsuccessful login attempts using invalid passwords.
+
+![RADIUS traffic inspection](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/275fba478ef96a815d72139b7e17ee9d5949a8a0/RADIUS.PNG)
+
+Traditional RADIUS has security limitations, particularly concerning the protection of authentication traffic and the use of shared secrets. However, the presence of visible RADIUS packets does not by itself demonstrate that passwords were exposed or that authentication security was compromised.
+
+**DNS Traffic Inspection**
+
+A separate packet capture was performed using an Ethernet network interface. The Wireshark display filter `dns` was applied to isolate DNS traffic from the captured packets.
+
+![Capturing traffic on an Ethernet interface](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20ethernet%203.PNG)
+
+![Inspecting DNS traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Early%20DNS%20traffic.PNG)
+
+The captured DNS packets demonstrated that conventional, unencrypted DNS queries and responses can be inspected in Wireshark.
+
+**Security Relevance**
+
+Network traffic inspection can help identify authentication activity and reveal information about network communications.
+
+Traditional DNS traffic may expose queried domain names to parties able to observe the network. Encrypted DNS mechanisms, such as DNS over HTTPS (DoH) and DNS over TLS (DoT), can protect DNS queries in transit.
+
+Similarly, inspecting RADIUS traffic can support authentication troubleshooting and security assessments, although evaluating its security requires examining the protocol configuration and the authentication method in use.
 
 ## Security Analysis
 ## Learning Outcomes
