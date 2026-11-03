@@ -330,7 +330,8 @@ Unlike HTTP Basic Authentication, which typically transmits credentials in an `A
 
 The captured HTTP traffic was inspected to identify the submitted form data and determine whether the credentials were visible.
 
-![Inspecting HTTP form-based authentication traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Display%20captured%20packets%20with%20HTTP%20traffic.PNG)
+
+<img width="725" height="413" alt="Display captured packets with HTTP traffic" src="https://github.com/user-attachments/assets/87501b8c-54a0-4ea5-b65b-e0ea59acca89" />
 
 The exercise demonstrated that credentials submitted through an HTML form can be exposed when the underlying HTTP connection is not encrypted.
 
@@ -338,7 +339,8 @@ The exercise demonstrated that credentials submitted through an HTML form can be
 
 DNS traffic was also examined using Wireshark, focusing on traffic associated with port 53.
 
-![Capturing DNS traffic on port 53](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20DNS%20traffic%20with%20port%2053.PNG)
+<img width="727" height="323" alt="Capturing DNS traffic with port 53" src="https://github.com/user-attachments/assets/2a8741f8-d12b-4bf0-a135-f241b0bfd70a" />   
+
 
 The captured packets demonstrated that conventional DNS traffic can be inspected without decrypting the packet contents.
 
