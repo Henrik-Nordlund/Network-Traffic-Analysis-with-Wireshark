@@ -217,7 +217,7 @@ A previously captured PCAP file was opened in Wireshark to examine RADIUS (Remot
 
 The exercise involved inspecting authentication traffic associated with unsuccessful login attempts using invalid passwords.
 
-![RADIUS traffic inspection](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/275fba478ef96a815d72139b7e17ee9d5949a8a0/RADIUS.PNG)
+<img width="746" height="580" alt="RADIUS" src="https://github.com/user-attachments/assets/7eab7958-9046-4a18-93a3-3bb84bc0cb4c" />   
 
 Traditional RADIUS has security limitations, particularly concerning the protection of authentication traffic and the use of shared secrets. However, the presence of visible RADIUS packets does not by itself demonstrate that passwords were exposed or that authentication security was compromised.
 
@@ -225,9 +225,11 @@ Traditional RADIUS has security limitations, particularly concerning the protect
 
 A separate packet capture was performed using an Ethernet network interface. The Wireshark display filter `dns` was applied to isolate DNS traffic from the captured packets.
 
-![Capturing traffic on an Ethernet interface](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20ethernet%203.PNG)
+<img width="755" height="585" alt="Capturing from ethernet 3" src="https://github.com/user-attachments/assets/ee263c71-3bbe-4381-8a80-970e5cd4441b" />     
 
-![Inspecting DNS traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Early%20DNS%20traffic.PNG)
+
+<img width="749" height="586" alt="Early DNS traffic" src="https://github.com/user-attachments/assets/ef3810da-8f7f-4af3-8526-b8ff12788c06" />   
+
 
 The captured DNS packets demonstrated that conventional, unencrypted DNS queries and responses can be inspected in Wireshark.
 
