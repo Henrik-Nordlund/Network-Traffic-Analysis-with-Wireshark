@@ -2,10 +2,27 @@
 Hands-on network traffic analysis with Wireshark, covering packet capture, traffic filtering, protocol inspection, and security analysis of HTTP, HTTPS, DNS, RADIUS, Telnet, and SSH.
 
 ## Project Overview
-To be filled in later...
+This portfolio project consolidates two guided Coursera labs focused on network traffic analysis using Wireshark.
+
+Part 1 covers packet capture, traffic inspection, and display filtering, including HTTP/HTTPS traffic, TLS handshakes, IP address filtering, and combined filter expressions.
+
+Part 2 focuses on protocol security analysis, including RADIUS authentication, HTTP Basic and form-based authentication, DNS, Telnet, SSH, and HTTPS decryption using locally exported TLS session secrets.
+
+The objective was to develop practical experience in capturing, filtering, and interpreting network traffic while examining the security implications of different communication protocols.
 
 ## Lab Environment
-To be filled in later...
+
+The exercises were performed in guided lab environments using:
+
+Operating systems: Ubuntu Linux and Windows
+
+Network analysis: Wireshark
+
+Command-line tools: Linux terminal and Windows PowerShell
+
+Authentication testing: NTRadPing and a public RADIUS test server
+
+Protocols examined: TCP/IP, HTTP, HTTPS/TLS, DNS, RADIUS, Telnet, and SSH   
 
 ## Part 1 – Packet Capture and Traffic Filtering
 
@@ -194,16 +211,6 @@ This guided project covered the fundamentals of packet capture and traffic inspe
 The exercises included configuring packet capture permissions, capturing and saving network traffic, examining HTTP- and HTTPS-associated TCP traffic, identifying IP addresses through TLS handshake inspection, and combining display filters to include or exclude selected connections.
 
 These techniques provide a foundation for network troubleshooting and security investigations, where analysts need to isolate relevant communications from larger packet captures.
-
-## Part 2 – Protocol Security Analysis
-
-2.1	Network Traffic Capture and DNS Inspection
-2.2	RADIUS Authentication Traffic Analysis
-2.3	HTTP Basic Authentication
-2.4	HTTP Form-Based Authentication and DNS
-2.5	Telnet Traffic Analysis
-2.6	SSH Traffic Analysis
-2.7	HTTPS Traffic Decryption Using TLS Session Keys
 
 ## Part 2 – Network Security Analysis
 
