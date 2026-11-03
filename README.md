@@ -309,6 +309,72 @@ When Basic Authentication is used over unencrypted HTTP, an observer with access
 
 Using HTTPS protects the credentials in transit through TLS encryption. Basic Authentication is therefore not inherently insecure, but it must be used over a properly secured connection to prevent credential exposure.
 
+### 2.4 HTTP Form-Based Authentication and DNS Analysis
+
+The objective was to examine how form-based authentication transmits credentials over HTTP and investigate the visibility of DNS traffic in Wireshark.
+
+**HTTP Form-Based Authentication**
+
+An HTTP website using form-based authentication was accessed, and the resulting network traffic was captured and examined in Wireshark.
+
+Unlike HTTP Basic Authentication, which typically transmits credentials in an `Authorization` header, form-based authentication commonly submits credentials in the body of an HTTP POST request.
+
+The captured HTTP traffic was inspected to identify the submitted form data and determine whether the credentials were visible.
+
+![Inspecting HTTP form-based authentication traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Display%20captured%20packets%20with%20HTTP%20traffic.PNG)
+
+The exercise demonstrated that credentials submitted through an HTML form can be exposed when the underlying HTTP connection is not encrypted.
+
+**DNS Traffic Analysis**
+
+DNS traffic was also examined using Wireshark, focusing on traffic associated with port 53.
+
+![Capturing DNS traffic on port 53](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20DNS%20traffic%20with%20port%2053.PNG)
+
+The captured packets demonstrated that conventional DNS traffic can be inspected without decrypting the packet contents.
+
+**Security Relevance**
+
+Using HTTP POST instead of GET does not provide encryption. Although POST typically places submitted form data in the request body rather than the URL, credentials remain exposed to network observers when transmitted over unencrypted HTTP.
+
+HTTPS protects both HTTP headers and request bodies during transmission using TLS.
+
+Similarly, conventional DNS queries and responses are generally transmitted without encryption, potentially exposing queried domain names. DNS over HTTPS (DoH) and DNS over TLS (DoT) provide encrypted alternatives.
+
+The exercise illustrates the importance of distinguishing between application-level data handling and transport-level encryption.
+
+### 2.5 Telnet Traffic Analysis
+
+The objective was to generate and capture Telnet traffic using Wireshark and examine the security implications of unencrypted remote access protocols.
+
+**Generating Telnet Traffic**
+
+Telnet is a remote access protocol that typically uses TCP port 23. Unlike SSH, Telnet does not provide encryption for the communication between the client and server.
+
+A Telnet session was initiated from PowerShell using the following command:
+
+`telnet tty.sdf.org`
+
+Wireshark was used to capture the resulting network traffic associated with TCP port 23.
+
+**Inspecting the TCP Stream**
+
+The captured Telnet packets were examined using Wireshark's **Follow → TCP Stream** feature, which reconstructs the application data exchanged during a TCP connection.
+
+![Following a Telnet TCP stream in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Wireshark%20follow%20TCP%20stream.PNG)
+
+The reconstructed stream demonstrated that Telnet session data can be inspected without decrypting the traffic.
+
+**Security Relevance**
+
+Telnet transmits session data without encryption, potentially exposing commands, terminal output, and authentication credentials to anyone capable of capturing the traffic.
+
+SSH (Secure Shell) provides an encrypted alternative for remote administration, protecting the confidentiality and integrity of communications.
+
+This exercise demonstrated why Telnet should generally be avoided for remote administration in favor of SSH.
+
+
+
 ## Security Analysis
 ## Learning Outcomes
 
