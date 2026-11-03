@@ -372,7 +372,8 @@ Wireshark was used to capture the resulting network traffic associated with TCP 
 
 The captured Telnet packets were examined using Wireshark's **Follow → TCP Stream** feature, which reconstructs the application data exchanged during a TCP connection.
 
-![Following a Telnet TCP stream in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Wireshark%20follow%20TCP%20stream.PNG)
+<img width="725" height="635" alt="Wireshark follow TCP stream" src="https://github.com/user-attachments/assets/f8742ce4-cbc0-4f30-a435-b29e07c539be" />   
+
 
 The reconstructed stream demonstrated that Telnet session data can be inspected without decrypting the traffic.
 
@@ -404,7 +405,7 @@ Wireshark was configured with a capture filter targeting the host `tty.sdf.org`.
 
 The captured traffic was examined using Wireshark's **Statistics → Conversations** feature to identify the separate network connections.
 
-![Wireshark conversations showing Telnet and SSH traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Conversations%20capturing%20both%20telnnet%20and%20ssl.PNG)
+<img width="732" height="285" alt="Conversations capturing both telnnet and ssl" src="https://github.com/user-attachments/assets/49f148b9-3816-4aee-abfe-f14a7b17fe3e" />   
 
 **Comparing TCP Streams**
 
@@ -412,11 +413,14 @@ Wireshark's **Follow → TCP Stream** feature was used to inspect the applicatio
 
 The Telnet stream displayed readable session content because the protocol does not encrypt the transmitted data.
 
-![Unencrypted Telnet session traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Telnet%20traffic%20is%20not%20encrypted.PNG)
+<img width="606" height="616" alt="Telnet traffic is not encrypted" src="https://github.com/user-attachments/assets/08c7ce13-ee57-4e0f-86dd-125d6d213078" />    
+
 
 In contrast, the SSH stream contained encrypted session data that could not be interpreted as readable terminal communication from the captured packets alone.
 
-![Encrypted SSH session traffic](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/SSH%20traffic%20is%20encrypted.PNG)
+
+<img width="720" height="645" alt="SSH traffic is encrypted" src="https://github.com/user-attachments/assets/a1fe3846-0653-4ba1-a248-f430a9ee5400" />    
+
 
 **Security Relevance**
 
@@ -459,11 +463,13 @@ With the corresponding TLS session secrets available, Wireshark could decrypt th
 
 The reconstructed communication was examined using Wireshark's stream-following functionality.
 
-![Decrypted HTTPS stream in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Unencypted%20HTTPS%20stream.PNG)
+<img width="955" height="690" alt="Unencypted HTTPS stream" src="https://github.com/user-attachments/assets/df5be5da-cea0-4c48-8ace-ca2b95bcb582" />    
+
 
 The decrypted application data could also be inspected in the packet details.
 
-![Decrypted HTTPS packets in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Clearer%20Packets.PNG)
+<img width="955" height="676" alt="Clearer Packets" src="https://github.com/user-attachments/assets/e1a077f9-f156-42c8-8a7f-0432fc8f394c" />      
+
 
 **Security Relevance**
 
