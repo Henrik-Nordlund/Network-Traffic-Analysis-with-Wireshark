@@ -249,11 +249,13 @@ The objective was to generate and capture RADIUS authentication traffic, examine
 
 A public RADIUS test server was used to generate authentication traffic. The server was accessed using NTRadPing, a RADIUS client testing utility, with configured credentials and a shared secret.
 
-![Public RADIUS test server](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Public%20Radius%20server.PNG)
+<img width="979" height="655" alt="Public Radius server" src="https://github.com/user-attachments/assets/9a66a148-f20a-4c1b-914e-99520fee9d97" />    
+
 
 The client was used to submit authentication requests to the server and observe the responses.
 
-![RADIUS Access-Accept response in NTRadPing](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/NTRadPing%20access%20accept.PNG)
+<img width="668" height="421" alt="NTRadPing access accept" src="https://github.com/user-attachments/assets/24394fc5-914c-47d4-80a1-206ee091f105" />    
+
 
 **Capturing and Inspecting Authentication Traffic**
 
@@ -261,7 +263,8 @@ Wireshark was configured to capture traffic on UDP port 1812, the standard port 
 
 Authentication requests were generated using the correct username and different passwords. The captured traffic was examined to identify RADIUS authentication messages and the corresponding server responses.
 
-![RADIUS authentication requests and responses](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20port%201812%20-%20different%20responses.PNG)
+<img width="707" height="579" alt="Capturing from port 1812 - different responses" src="https://github.com/user-attachments/assets/d3239ada-a364-4a93-8ae4-e186d0cea551" />    
+
 
 **Inspecting Password Protection**
 
@@ -273,7 +276,8 @@ In the exercise, the shared secret configured in the RADIUS client was entered i
 
 This allowed Wireshark to decode the protected password attribute in the captured traffic.
 
-![RADIUS password inspection using a known shared secret](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20port%201812%20-%20password%20with%20known%20secret.PNG)
+<img width="596" height="464" alt="Capturing from port 1812 - password with known secret" src="https://github.com/user-attachments/assets/e21f3445-8d7d-400f-b83b-dd3a556195eb" />   
+
 
 **Security Relevance**
 
