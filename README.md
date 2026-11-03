@@ -295,17 +295,20 @@ The objective was to examine how HTTP Basic Authentication transmits credentials
 
 A website using HTTP Basic Authentication was accessed over an unencrypted HTTP connection. The browser prompted the user to enter login credentials.
 
-![HTTP Basic Authentication login prompt](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20login.PNG)
+<img width="951" height="631" alt="Http login" src="https://github.com/user-attachments/assets/8810c490-de53-4917-9acf-be1ac904fcfd" />
+
 
 **Inspecting Authentication Traffic**
 
 The network traffic was examined in Wireshark using a display filter for TCP port 80, commonly associated with HTTP.
 
-![HTTP authentication traffic in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20login%20in%20Wireshark.PNG)
+<img width="722" height="191" alt="Http login in Wireshark" src="https://github.com/user-attachments/assets/cee94c02-c3f4-4c9e-a2f5-2c23408e096f" />   
+
 
 Further inspection of the captured HTTP request revealed the transmitted login credentials.
 
-![HTTP Basic Authentication credentials visible in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20credentials.PNG)
+<img width="723" height="360" alt="Http credentials" src="https://github.com/user-attachments/assets/4e9aedb5-8b9e-45cb-8a80-2addea5bd174" />
+
 
 **Security Relevance**
 
