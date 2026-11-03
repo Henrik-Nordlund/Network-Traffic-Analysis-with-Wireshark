@@ -239,6 +239,48 @@ Traditional DNS traffic may expose queried domain names to parties able to obser
 
 Similarly, inspecting RADIUS traffic can support authentication troubleshooting and security assessments, although evaluating its security requires examining the protocol configuration and the authentication method in use.
 
+### 2.2 RADIUS Authentication Traffic Analysis
+
+The objective was to generate and capture RADIUS authentication traffic, examine server responses, and investigate how password information is protected.
+
+**Generating RADIUS Traffic**
+
+A public RADIUS test server was used to generate authentication traffic. The server was accessed using NTRadPing, a RADIUS client testing utility, with configured credentials and a shared secret.
+
+![Public RADIUS test server](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Public%20Radius%20server.PNG)
+
+The client was used to submit authentication requests to the server and observe the responses.
+
+![RADIUS Access-Accept response in NTRadPing](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/NTRadPing%20access%20accept.PNG)
+
+**Capturing and Inspecting Authentication Traffic**
+
+Wireshark was configured to capture traffic on UDP port 1812, the standard port for RADIUS authentication.
+
+Authentication requests were generated using the correct username and different passwords. The captured traffic was examined to identify RADIUS authentication messages and the corresponding server responses.
+
+![RADIUS authentication requests and responses](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20port%201812%20-%20different%20responses.PNG)
+
+**Inspecting Password Protection**
+
+Traditional RADIUS does not encrypt the entire authentication packet. For PAP-based authentication, the `User-Password` attribute is obfuscated using an MD5-based mechanism involving the shared secret and the request authenticator.
+
+In the exercise, the shared secret configured in the RADIUS client was entered into Wireshark under:
+
+`Edit → Preferences → Protocols → RADIUS`
+
+This allowed Wireshark to decode the protected password attribute in the captured traffic.
+
+![RADIUS password inspection using a known shared secret](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Capturing%20from%20port%201812%20-%20password%20with%20known%20secret.PNG)
+
+**Security Relevance**
+
+The exercise demonstrated limitations of traditional RADIUS authentication traffic protection.
+
+Although the password attribute is not transmitted as readable plaintext, its protection depends on the shared secret and an older MD5-based mechanism. Other RADIUS attributes may remain visible to an observer.
+
+Access to the shared secret can allow the protected password attribute to be decoded in suitable captured PAP authentication exchanges. This illustrates why shared secrets must be protected and why modern deployments should consider stronger transport protection, such as RADIUS over TLS (RadSec), where supported.
+
 ## Security Analysis
 ## Learning Outcomes
 
