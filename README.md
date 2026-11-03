@@ -281,6 +281,34 @@ Although the password attribute is not transmitted as readable plaintext, its pr
 
 Access to the shared secret can allow the protected password attribute to be decoded in suitable captured PAP authentication exchanges. This illustrates why shared secrets must be protected and why modern deployments should consider stronger transport protection, such as RADIUS over TLS (RadSec), where supported.
 
+### 2.3 HTTP Basic Authentication Analysis
+
+The objective was to examine how HTTP Basic Authentication transmits credentials and identify the security risks of using this authentication method over an unencrypted connection.
+
+**Generating HTTP Authentication Traffic**
+
+A website using HTTP Basic Authentication was accessed over an unencrypted HTTP connection. The browser prompted the user to enter login credentials.
+
+![HTTP Basic Authentication login prompt](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20login.PNG)
+
+**Inspecting Authentication Traffic**
+
+The network traffic was examined in Wireshark using a display filter for TCP port 80, commonly associated with HTTP.
+
+![HTTP authentication traffic in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20login%20in%20Wireshark.PNG)
+
+Further inspection of the captured HTTP request revealed the transmitted login credentials.
+
+![HTTP Basic Authentication credentials visible in Wireshark](https://github.com/Henrik-Nordlund/Basic-Network-Security-Analysis-with-Wireshark/raw/f8e69bf6da86951a7c73d0cc8754bc40cdafb76e/Http%20credentials.PNG)
+
+**Security Relevance**
+
+HTTP Basic Authentication encodes credentials using Base64, which is an encoding mechanism rather than encryption.
+
+When Basic Authentication is used over unencrypted HTTP, an observer with access to the network traffic can recover the username and password from the HTTP Authorization header.
+
+Using HTTPS protects the credentials in transit through TLS encryption. Basic Authentication is therefore not inherently insecure, but it must be used over a properly secured connection to prevent credential exposure.
+
 ## Security Analysis
 ## Learning Outcomes
 
